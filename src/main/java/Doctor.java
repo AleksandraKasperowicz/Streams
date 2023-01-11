@@ -10,7 +10,8 @@ public class Doctor {
                 .stream()
                 .map(s -> s.split(":"))
                 .flatMap(Arrays::stream)
-                .distinct().filter(s -> !s.equals("Szpital") && !s.equals("Przychodnia"))
+                .distinct()
+                .filter(s -> !s.equals("Szpital") && !s.equals("Przychodnia"))
                 .collect(Collectors.toList());
         System.out.println(specializations);
     }
